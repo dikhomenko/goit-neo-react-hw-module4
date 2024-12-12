@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ImageCard from "../ImageCard/ImageCard";
-import styles from "./ImageGallery.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ImageCard from '../ImageCard/ImageCard';
+import styles from './ImageGallery.module.css';
 
 const ImageGallery = ({ images, onImageClick }) => {
   if (images.length === 0) {
-    return null; // Не рендеримо, якщо немає зображень
+    return null;
   }
 
   return (
@@ -14,7 +14,7 @@ const ImageGallery = ({ images, onImageClick }) => {
         <li key={id} className={styles.item}>
           <ImageCard
             imageUrl={urls.small}
-            alt={alt_description || "Image"}
+            alt={alt_description || 'Image'}
             onClick={() => onImageClick(urls.regular, alt_description)}
           />
         </li>
